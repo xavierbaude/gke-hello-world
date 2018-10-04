@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: hello-world-deployment
+  namespace: hello-world
+  labels:
+    app: front
+spec:
+  selector:
+    matchLabels:
+      app: front
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: hello-world
+        image: quay.io/vguar/hello-world-java
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: '1'
+            memory: 1024Mi
+          requests:
+            cpu: '1'
+            memory: 1024Mi
