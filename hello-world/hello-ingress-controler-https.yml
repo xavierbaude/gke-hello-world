@@ -14,7 +14,7 @@ spec:
       - path: /
         backend:
           serviceName: hello-world-deployment
-          servicePort: 8080
+          servicePort: 8888
   tls:
   - secretName: hello-certificate
     hosts:

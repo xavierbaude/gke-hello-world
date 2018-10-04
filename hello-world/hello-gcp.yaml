@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: quay.io/vguar/hello-world-java
+        image: quay.io/xavierbaude/hello-world
         ports:
-        - containerPort: 80
+        - containerPort: 8888
         resources:
           limits:
             cpu: '1'
